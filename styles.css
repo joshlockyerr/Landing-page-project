@@ -3,6 +3,11 @@ body {
     margin: 0
 }
 
+a {
+    text-decoration: none;
+    color: #e5e7eb;
+}
+
 .top {
     background-color: #1F2937;
     display: flex;
@@ -75,21 +80,38 @@ button {
     font-size: 18px;
 }
 
+.info {
+    width: 200px;
+    height: 200px;
+}
+
 .info img {
     width: 200px;
     height: 200px;
+    border: 4px;
+    border-style: solid;
+    border-color: #3882f6;
+    border-radius: 5px;
 }
 
 .information-section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 64px;
+    margin-top: 32px;
     margin-bottom: 64px;
 }
 
 .information-imgs {
     display: flex;
-    margin-top: 15px;
+    margin-top: 32px;
+    justify-content: space-around;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
+.information-heading {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
