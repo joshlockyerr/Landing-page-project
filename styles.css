@@ -22,7 +22,7 @@ ul {
 }
 
 li {
-    margin: 8px;
+    margin: 10px;
 }
 
 .header {
@@ -46,15 +46,50 @@ li {
     color: #f9faf8;
 }
 
+div.hero-title {
+    font-size: 48px;
+}
+
 .hero {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
 }
 
 .hero-container {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 400px;
     flex-wrap: wrap;
     
 }
+
+button {
+    width: fit-content;
+    padding: 4px 14px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #3882f6  ;
+    color: #f9faf8;
+    font-size: 18px;
+}
+
+.info img {
+    width: 200px;
+    height: 200px;
+}
+
+.information-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.information-imgs {
+    display: flex;
+    margin-top: 15px;
+}
+
