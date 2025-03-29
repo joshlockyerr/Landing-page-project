@@ -108,65 +108,10 @@ button {
     justify-content: space-around;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 32px;
 }
 
 .information-heading {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
-}
-
-.quote-section {
-    background-color: #e5e7eb;
-    display: flex;
-    flex-direction: column;
-    padding: 100px;
-
-}
-
-.quote {
-    font-size: 36px;
-    font-style: italic;
-    width: 500px;
-    align-self: center;
-}
-
-.author {
-    align-self: center;
-    margin: 12px;
-    margin-left: 225px
-}
-
-.bottom-page {
-    display: flex;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    background-color: #3882f6;
-    width: 700px;
-    color: #e5e7eb;
-    padding: 48px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around;
-}
-
-.bottom-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.call-action {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: #1F2937;
-    color: #f9faf8;
-    padding: 40px;
-    font-size: 18px;
 }
