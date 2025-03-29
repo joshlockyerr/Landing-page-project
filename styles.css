@@ -141,7 +141,7 @@ button {
 .bottom-page {
     display: flex;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background-color: #3882f6;
     width: 700px;
     color: #e5e7eb;

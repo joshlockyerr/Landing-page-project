@@ -1,71 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DIO Photography</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DIO_Photography.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="top">
-        <div class="header">
-            <div class="header-title">Header Logo</div>
-            <ul class="header-links">
-                <li><a href="">header link one</a></li>
-                <li><a href="">header link two</a></li>
-                <li><a href="">header link three</a></li>
-            </ul>
-        </div>
-        <div class="hero">
-            <div class="hero-container">
-                <div class="hero-title">This website is awesome</div>
-                <div class="hero-info">This website has some subtext that goes her under the
-                    main title. It's smaller font and colour is lower contrast.
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-page="/Index">DIO Photography</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="photoCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-page="/Photos/Sport">Sport</a></li>
+                                <li><a class="dropdown-item" asp-page="/Photos/Nature">Nature</a></li>
+                                <li><a class="dropdown-item" asp-page="/Photos/Portraits">Portraits</a></li>
+                                <li><a class="dropdown-item" asp-page="/Photos/Events">Events</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <button>Sign  up</button>
             </div>
-            <div>
-            <img src="./img/place-holder.png" alt="place holder image" class="top-image">
-            </div>    
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center mt-4 py-3">
+        <div class="container">
+            &copy; 2025 - DIO Photography - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
-    </div>
-    <div class="information-section">
-        <div class="information-heading">Information heading</div>
-        <div class="information-imgs">
-            <div class="info">
-                <img src="./img/place-holder-square.jpeg" alt="square blank image" class="info-img">
-                <div>Some subtext giving information under the image</div>
-            </div>
+    </footer>
 
-            <div class="info">
-                <img src="./img/place-holder-square.jpeg" alt="square blank image" class="info-img">
-                <div>Some subtext giving information under the image</div>
-            </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
-            <div class="info">
-                <img src="./img/place-holder-square.jpeg" alt="square blank image" class="info-img">
-                <div>Some subtext giving information under the image</div>      
-            </div>
-
-            <div class="info">
-                <img src="./img/place-holder-square.jpeg" alt="square blank image" class="info-img">
-                <div>Some subtext giving information under the image</div>   
-            </div>
-        </div>
-    </div>
-    <div class="quote-section">
-        <div class="quote">Quote from customer to fill space. Will someone read it? well you did!</div>
-        <div class="author">-Josh, the best web developer</div>
-    </div>
-    <div class="bottom-page">
-            <div class="bottom container">
-                <div class="call-action">Call to action! It's time!</div>
-                <div>Sign up for our product by clicking the sign up button!</div>
-            </div>
-            <button>Sign up</button>
-    </div>
-    <div class="footer">
-        <div>Footer of the page</div>
-    </div>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
