@@ -9,7 +9,7 @@ a {
 }
 
 .top {
-    background-color: #1F2937;
+    background-color: black;
     display: flex;
     flex-direction: column;
 }
